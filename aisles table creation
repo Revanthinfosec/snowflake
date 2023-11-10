@@ -1,0 +1,13 @@
+-- creating a couple of tables that makes yours ecommerce website
+
+CREATE OR REPLACE TABLE aisles (
+        aisle_id INTEGER PRIMARY KEY,
+        aisle VARCHAR
+    );
+
+COPY INTO aisles (aisle_id, aisle)
+FROM @my_stage/aisles.csv
+FILE_FORMAT = (FORMAT_NAME = 'csv_file_format');
+
+-- creating a product table
+
