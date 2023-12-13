@@ -1,9 +1,0 @@
-CREATE STAGE my_stage
-URL = 'paste yours aws s3url here that starts as -->  s3://url/'
-CREDENTIALS = (key_id_of_aws = '' secrete_key_of_aws = '');
-
-CREATE OR REPLACE FILE FORMAT csv_file_format
-TYPE = 'CSV'
-FIELD_DELIMITER = ','
-SKIP_HEADER = 1
-FIELD_OPTIONALLY_ENCLOSED_BY='"';
